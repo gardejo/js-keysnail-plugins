@@ -9,9 +9,6 @@ let PLUGIN_INFO =
     <iconURL>https://github.com/gardejo/js-keysnail-plugin/raw/master/bookmark/bookmark.ks.png</iconURL>
     <version>0.0.0</version>
     <minVersion>1.8.0</minVersion>
-    <!--
-    <include>main</include>
-    -->
     <detail><![CDATA[
 === Usage ===
 
