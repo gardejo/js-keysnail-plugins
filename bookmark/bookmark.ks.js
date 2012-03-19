@@ -136,7 +136,7 @@ var bookmark = (function () {
             bmService.removeItem(
                 bmService.getBookmarkIdsForURI(uri)
             );
-            display.echoStatusBar('Removed bookmark: ' + title, 2000);
+            display.echoStatusBar('Removed bookmark: ' + title, displayTime);
         },
 
         toggle : function () {
