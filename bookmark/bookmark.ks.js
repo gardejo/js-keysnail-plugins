@@ -14,7 +14,7 @@ let PLUGIN_INFO =
 
 TBD
 
->||
+>|javascript|
 
 key.setViewKey(['C-i', 'a'], function () {
     ext.exec('add-bookmark');
@@ -59,7 +59,7 @@ TBD
 
 キーバインドは適当に。
 
->||
+>|javascript|
 
 key.setViewKey(['C-i', 'a'], function () {
     ext.exec('add-bookmark');
