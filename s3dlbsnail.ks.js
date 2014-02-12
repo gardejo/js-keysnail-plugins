@@ -14,7 +14,7 @@ var PLUGIN_INFO =
     <description lang="ja">S3. Download Statusbar との連携</description>
     <version>0.0.0</version>
     <updateURL>http://github.com/gardejo/js-keysnail-plugins/raw/master/s3dlbsnail.ks.js</updateURL>
-    <iconURL>http://github.com/gardejo/js-keyssnail-plugins/raw/master/s3dlbsnail.png</iconURL>
+    <iconURL>http://github.com/gardejo/js-keysnail-plugins/raw/master/s3dlbsnail.png</iconURL>
     <author mail="gardejo@ermitejo.com" homepage="http://gardejo.org/">gardejo (MORIYA Masaki)</author>
     <license document="http://www.opensource.org/licenses/mit-license.php">The MIT License</license>
     <license lang="ja">MIT ライセンス</license>
