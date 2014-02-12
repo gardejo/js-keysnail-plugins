@@ -5,8 +5,8 @@ let PLUGIN_INFO =
     <description lang="ja">TBD</description>
     <author>gardejo (MORIYA Masaki)</author>
     <license>MIT</license>
-    <updateURL>https://github.com/gardejo/js-keysnail-plugin/raw/master/bookmark/bookmark.ks.js</updateURL>
-    <iconURL>https://github.com/gardejo/js-keysnail-plugin/raw/master/bookmark/bookmark.ks.png</iconURL>
+    <updateURL>https://github.com/gardejo/js-keysnail-plugins/raw/master/bookmark.ks.js</updateURL>
+    <iconURL>https://github.com/gardejo/js-keysnail-plugins/raw/master/bookmark.ks.png</iconURL>
     <version>0.0.0</version>
     <minVersion>1.8.0</minVersion>
     <detail><![CDATA[
