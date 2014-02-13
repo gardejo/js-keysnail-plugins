@@ -211,7 +211,7 @@ let pOptions = plugins.setupOptions("s3dlbsnail", {
             en: "Local keymap for manipulation for all file"
         })
     },
-    "swith_to_keymap"   : {
+    "switch_to_keymap"   : {
         preset: {
             "C-z"   : "prompt-toggle-edit-mode",
             "SPC"   : "prompt-next-page",
