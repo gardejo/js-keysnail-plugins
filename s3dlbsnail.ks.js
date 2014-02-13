@@ -456,7 +456,7 @@ var s3dlbsnail =
                     }
                 },
                 M({ja: "このファイルを開く",
-                   en:"Open this file"}),
+                   en: "Open this file"}),
                 "open-this-file,c"],
 
                 [function (aIndex) {
@@ -509,7 +509,7 @@ var s3dlbsnail =
                     }
                 },
                 M({ja: "このファイルを削除",
-                   en:"Delete this file"}),
+                   en: "Delete this file"}),
                 "delete-this-file,c"],
 
                 [function (aIndex) {
