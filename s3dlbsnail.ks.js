@@ -102,6 +102,10 @@ plugins.options["s3dlbsnail.file_style"]        = "font-weight:bold";
 plugins.options["s3dlbsnail.description_style"] = "";
 ||<
 
+=== dlbsnailとの互換 ===
+
+"s3dlbsnail" の API は原作の "dlbsnail" と互換性があるため、 .keysnail.js で "dlbsnail" 関連の設定がなされている場合、 "dlbsnail" を "s3dlbsnail" に一括置換すれば、そのままお使いいただけます。
+
 === 注意 ===
 
 上記の設定では、削除( delete-this-file )やキャンセル( cancel-this-file )などの不可逆的な操作に関してはコメントアウトしてあります。誤使用の恐れがあるからです。これらの機能で生じたいかなる事故に対して責任は負いかねますので、その覚悟のある方は適宣コメントアウトを外してください。
@@ -124,8 +128,6 @@ key.setViewKey('D', function (ev, arg) {
 当該プラグインの依存先である Firefox アドオン "Download Statusbar" ( https://addons.mozilla.org/ja/firefox/addon/download-statusbar/ ) 0.9.10 が Firefox 26 以降に対応していないため、後継アドオンの "S3. Download Statusbar" 2.01 に対応させるための変更を施したものです。
 
 "Icon Archive" ( http://www.iconarchive.com )のアイコンをベースにしたアイコンも、同様に使わせていただきました。
-
-"s3dlbsnail" の API は原作の "dlbsnail" と互換性があるため、 .keysnail.js で "dlbsnail" 関連の設定がなされている場合、 "dlbsnail" を "s3dlbsnail" に一括置換すれば、そのままお使いいただけます。
 
     ]]></detail>
 </KeySnailPlugin>;
