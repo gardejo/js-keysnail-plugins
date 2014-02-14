@@ -451,24 +451,22 @@ var s3dlbsnail =
 
             var fileActions = [
                 [function (aIndex) {
-                    if (collectList[aIndex][0] == "finished") {
-                        s3downbar.action.start_open_finished
-                            (collectList[aIndex][5]);
-                        prompt.finish(true);
-                    }
+                    s3downbar.action.start_open_finished(
+                        collectList[aIndex][5],
+                        collectList[aIndex][0] == "finished"
+                    );
+                    prompt.finish(true);
                 },
                 M({ja: "このファイルを開く",
                    en: "Open this file"}),
                 "open-this-file,c"],
 
                 [function (aIndex) {
-                    if (collectList[aIndex][0] == "finished") {
-                        s3downbar.action.start_show_file
-                            (collectList[aIndex][5]);
-                        s3downbar.action.clear_animate
-                            (collectList[aIndex][5], 1, 125, "width", "clear");
-                        prompt.finish(true);
-                    }
+                    s3downbar.action.start_show_file(
+                        collectList[aIndex][5],
+                        collectList[aIndex][0] == "finished"
+                    );
+                    prompt.finish(true);
                 },
                 M({ja: "このファイルを含むフォルダを開く",
                    en: "Show this file"}),
