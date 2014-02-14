@@ -124,7 +124,7 @@ key.setViewKey('D', function (ev, arg) {
 
 === 謝辞 ===
 
-この Keysnail プラグインの開発に当たっては、 satoudosu さん( http://d.hatena.ne.jp/satoudosu/ )の "dlbsnail" ( http://github.com/satoudosu/KeySnail_Plugin/raw/master/dlbsnail.ks.js ) 0.3 (2011/05/05) をフォークさせていただきました。
+この KeySnail プラグインの開発に当たっては、 satoudosu さん( http://d.hatena.ne.jp/satoudosu/ )の "dlbsnail" ( http://github.com/satoudosu/KeySnail_Plugin/raw/master/dlbsnail.ks.js ) 0.3 (2011/05/05) をフォークさせていただきました。
 当該プラグインの依存先である Firefox アドオン "Download Statusbar" ( https://addons.mozilla.org/ja/firefox/addon/download-statusbar/ ) 0.9.10 が Firefox 26 以降に対応していないため、後継アドオンの "S3. Download Statusbar" 2.01 に対応させるための変更を施したものです。
 
 "Icon Archive" ( http://www.iconarchive.com )のアイコンをベースにしたアイコンも、同様に使わせていただきました。
@@ -213,7 +213,7 @@ let pOptions = plugins.setupOptions("s3dlbsnail", {
             en: "Local keymap for manipulation for all file"
         })
     },
-    "switch_to_keymap"   : {
+    "switch_to_keymap"  : {
         preset: {
             "C-z"   : "prompt-toggle-edit-mode",
             "SPC"   : "prompt-next-page",
@@ -237,7 +237,7 @@ var s3dlbsnail =
     (function () {
         function allOpen() {
             var downbarelem = getDownbarelem();
-            var comparray = downbarelem.getElementsByAttribute("state", "1");
+            var comparray   = downbarelem.getElementsByAttribute("state", "1");
 
             for (var i=0; i<comparray.length; i++)
                 s3downbar.action.start_open_finished(comparray[i].id);
@@ -818,7 +818,7 @@ var s3dlbsnail =
 
                             return sty;
                         },
-                        callback : function (i) {
+                        callback  : function (i) {
                             if (i >= 0) {
                                 allActions[dispList[i]][0]();
                             }
