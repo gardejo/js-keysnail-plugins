@@ -66,6 +66,7 @@ plugins.options["s3dlbsnail.file_key_map"] = {
     "R"     : "rename-this-file",
     // "C-D"   : "delete-this-file",
     "C"     : "clear-this-file",
+    "S"     : "checksum-this-file",
     // for in progress or pause file
     // "C-C"   : "cancel-this-file",
     // for in progress file
@@ -180,6 +181,7 @@ let pOptions = plugins.setupOptions("s3dlbsnail", {
             "R"     : "rename-this-file",
             // "C-D"   : "delete-this-file",
             "C"     : "clear-this-file",
+            "S"     : "checksum-this-file",
             // for in progress or pause file
             // "C-C"   : "cancel-this-file",
             // for in progress file
@@ -537,6 +539,13 @@ var s3dlbsnail =
                 M({ja: "このファイルをステータスバーから取り除く",
                    en: "Clear this file"}),
                 "clear-this-file,c"],
+
+                [function (aIndex) {
+                    s3downbar.action.checksum(collectList[aIndex][5]);
+                },
+                M({ja: "チェックサムの計算",
+                   en: "Checksum this file"}),
+                "checksum-this-file"],
 
                 [function (aIndex) {
                     if (
