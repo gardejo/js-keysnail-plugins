@@ -23,6 +23,7 @@ var PLUGIN_INFO =
     <provides>
     <ext>s3dlbsnail-show-file-list</ext>
     <ext>s3dlbsnail-all-clear</ext>
+    <ext>s3dlbsnail-checksum-for-any-file</ext>
     <ext>s3dlbsnail-all-pause</ext>
     <ext>s3dlbsnail-all-resume</ext>
     <ext>s3dlbsnail-all-cancel</ext>
@@ -897,5 +898,10 @@ ext.add("s3dlbsnail-open-history", function() {
     s3downbar.action.open_download_window();
 }, M({ja: "ダウンロード履歴を見る",
       en: "Open Download History"}));
+
+ext.add("s3dlbsnail-checksum-for-any-file", function() {
+    s3downbar.action.checksum_for_any_file();
+}, M({ja: "指定したファイルのチェックサムを計算する",
+      en: "Checksum for any file"}));
 
 // }} ======================================================================= //
