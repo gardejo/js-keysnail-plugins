@@ -874,7 +874,7 @@ ext.add("s3dlbsnail-toggle-mode", function() {
       en: "Toggle S3. Download Statusbar Mode"}));
 
 ext.add("s3dlbsnail-open-preference", function() {
-    window.open('chrome://s3downbar/content/preferences.xul');
+    s3downbar.action.open_options_window();
 }, M({ja: "S3. Download Statusbar の設定を開く",
       en: "Open S3. Download Statusbar preference"}));
 
