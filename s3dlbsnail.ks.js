@@ -12,7 +12,7 @@ var PLUGIN_INFO =
     <name>S3. Dlbsnail</name>
     <description>Work with S3. Download Statusbar</description>
     <description lang="ja">S3. Download Statusbar との連携</description>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <updateURL>http://github.com/gardejo/js-keysnail-plugins/raw/master/s3dlbsnail.ks.js</updateURL>
     <iconURL>http://github.com/gardejo/js-keysnail-plugins/raw/master/s3dlbsnail.png</iconURL>
     <author mail="gardejo@ermitejo.com" homepage="http://gardejo.org/">gardejo (MORIYA Masaki)</author>
