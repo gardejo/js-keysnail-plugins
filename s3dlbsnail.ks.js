@@ -29,6 +29,7 @@ var PLUGIN_INFO =
     <ext>s3dlbsnail-all-open</ext>
     <ext>s3dlbsnail-show-command-for-all</ext>
     <ext>s3dlbsnail-toggle-mode</ext>
+    <ext>s3dlbsnail-toggle-auto-mode</ext>
     <ext>s3dlbsnail-open-preference</ext>
     <ext>s3dlbsnail-open-history</ext>
     </provides>
@@ -872,6 +873,11 @@ ext.add("s3dlbsnail-toggle-mode", function() {
     s3downbar.action.mode_toggle();
 }, M({ja: "ミニモードのトグル",
       en: "Toggle S3. Download Statusbar Mode"}));
+
+ext.add("s3dlbsnail-toggle-auto-mode", function() {
+    s3downbar.action.auto_mode_toggle();
+}, M({ja: "オートモードのトグル",
+      en: "Toggle S3. Download Statusbar Auto Mode"}));
 
 ext.add("s3dlbsnail-open-preference", function() {
     s3downbar.action.open_options_window();
