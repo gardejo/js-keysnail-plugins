@@ -139,7 +139,7 @@ key.setViewKey('D', function (ev, arg) {
 
 // Options {{ =============================================================== //
 
-const REFRESHER = null;
+let REFRESHER = null;
 
 let pOptions = plugins.setupOptions("s3dlbsnail", {
     "all_style"         : { preset: "color:black;font-weight:bold" },
@@ -348,16 +348,15 @@ var s3dlbsnail =
 
             var fileList = s3downbar.utils.get_downlist();
             for (var i=0; i<fileList.length; i++) {
-                var id          = fileList[i].id;
-                var dlElem      = document.getElementById(id);
-                var file        = dlElem.getAttribute("name");
-                var source      = dlElem.getAttribute("source");
-                var state       = getState(dlElem.getAttribute("state"));
-                // TODO: Verify if the code is compatible with dlbsnail.
-                var currpercent = (s3downbar.get_history(id))["progress"]
-                                + " %";
-                var iconURL     = "";
                 try {
+                    var id          = fileList[i].id;
+                    var dlElem      = document.getElementById(id);
+                    var file        = dlElem.getAttribute("name");
+                    var source      = dlElem.getAttribute("source");
+                    var state       = getState(dlElem.getAttribute("state"));
+                    // TODO: Verify if the code is compatible with dlbsnail.
+                    var history = s3downbar.get_history(id);
+                    var currpercent = (history ? history.progress : "?") + " %";
                     // TODO: Verify if the code is compatible with dlbsnail.
                     /*
                     const kExternalHelperAppServContractID
@@ -371,25 +370,26 @@ var s3dlbsnail =
                         = mimeService
                         .getTypeFromFile
                             ( (s3downbar.get_history(id))["target"] );
-                    iconURL
+                    var iconURL
                         = "moz-icon:"
                         + dlElem.getAttribute("target")
                         + "?size=32&contentType="
                         + contentType;
                     */
-                    iconURL = "moz-icon:"
-                            + dlElem.getAttribute("target")
-                            + "?size=32";
+                    var iconURL
+                        = "moz-icon:"
+                        + dlElem.getAttribute("target")
+                        + "?size=32";
+
+                    if (i != exclude) {
+                        if (type != "all" && state != type)
+                            continue;
+                        else
+                            collectList.push
+                                ([state, currpercent, iconURL, file, source, id]);
+                    }
                 } catch (e) {
                     // window.alert(e);
-                }
-
-                if (i != exclude) {
-                    if (type != "all" && state != type)
-                        continue;
-                    else
-                        collectList.push
-                            ([state, currpercent, iconURL, file, source, id]);
                 }
             }
 
