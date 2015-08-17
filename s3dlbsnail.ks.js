@@ -10,8 +10,8 @@
 var PLUGIN_INFO =
 <KeySnailPlugin>
     <name>S3. Dlbsnail</name>
-    <description>Work with S3. Download Statusbar</description>
-    <description lang="ja">S3. Download Statusbar との連携</description>
+    <description>Work with Download Manager (S3)</description>
+    <description lang="ja">Download Manager (S3) との連携</description>
     <version>0.0.3</version>
     <updateURL>http://github.com/gardejo/js-keysnail-plugins/raw/master/s3dlbsnail.ks.js</updateURL>
     <iconURL>http://github.com/gardejo/js-keysnail-plugins/raw/master/s3dlbsnail.png</iconURL>
@@ -37,14 +37,14 @@ var PLUGIN_INFO =
     <detail lang="ja"><![CDATA[
 === 使い方 ===
 
-Firefox アドオンの "S3. Download Statusbar" ( https://addons.mozilla.org/ja/firefox/addon/s3download-statusbar/ ) がインストールされていると、ダウンロードされたアイテムの操作が可能になります。
+    Firefox アドオンの "Download Manager (S3)" ( https://addons.mozilla.org/ja/firefox/addon/s3download-statusbar/ ) がインストールされていると、ダウンロードされたアイテムの操作が可能になります。
 
 次のようにして任意のキーへコマンドを割り当てておくことも可能です。
 
 >|javascript|
 key.setViewKey('d', function (ev, arg) {
     ext.exec("s3dlbsnail-show-file-list", arg, ev);
-}, 'Show S3. Download Statusbar Items', true);
+}, 'Show Download Manager (S3) Items', true);
 ||<
 
 上記のようなコードを .keysnail.js へ記述しておくことにより、ブラウズ画面において d キーを押すことで、ダウンロードしたアイテムの状態・ダウンロード進行状況・ファイル名・ソースを表示するプロンプトが立ち上がります。状態が "finished" のファイルを選択することで開くことができます。
@@ -128,7 +128,7 @@ key.setViewKey('D', function (ev, arg) {
 === 謝辞 ===
 
 この KeySnail プラグインの開発に当たっては、 satoudosu さん( http://d.hatena.ne.jp/satoudosu/ )の "dlbsnail" ( http://github.com/satoudosu/KeySnail_Plugin/raw/master/dlbsnail.ks.js ) 0.3 (2011/05/05) をフォークさせていただきました。
-当該プラグインの依存先である Firefox アドオン "Download Statusbar" ( https://addons.mozilla.org/ja/firefox/addon/download-statusbar/ ) 0.9.10 が Firefox 26 以降に対応していないため、後継アドオンの "S3. Download Statusbar" 2.01 に対応させるための変更を施したものです。
+当該プラグインの依存先である Firefox アドオン "Download Statusbar" ( https://addons.mozilla.org/ja/firefox/addon/download-statusbar/ ) 0.9.10 が Firefox 26 以降に対応していないため、後継アドオンの "Download Manager (S3)" 3.11.1-signed に対応させるための変更を施したものです。
 
 "Icon Archive" ( http://www.iconarchive.com )のアイコンをベースにしたアイコンも、同様に使わせていただきました。
 
@@ -852,27 +852,27 @@ ext.add("s3dlbsnail-show-file-list", function() {
 ext.add("s3dlbsnail-all-clear", function () {
     s3dlbsnail.clearAll();
 }, M({ja: "ダウンロード完了したファイルをすべてクリア",
-      en: "S3. Download Statusbar All Clear"}));
+      en: "Download Manager (S3) All Clear"}));
 
 ext.add("s3dlbsnail-all-pause", function () {
     s3dlbsnail.pauseAll();
 }, M({ja: "進行途中のファイルをすべて一時停止",
-      en: "S3. Download Statusbar All Pause"}));
+      en: "Download Manager (S3) All Pause"}));
 
 ext.add("s3dlbsnail-all-resume", function () {
     s3dlbsnail.resumeAll();
 }, M({ja: "一時停止中のファイルをすべて再開",
-      en: "S3. Download Statusbar All Resume"}));
+      en: "Download Manager (S3) All Resume"}));
 
 ext.add("s3dlbsnail-all-cancel", function () {
     s3dlbsnail.cancelAll();
 }, M({ja: "進行途中のファイルをすべてキャンセル",
-      en: "S3. Download Statusbar All Cancel"}));
+      en: "Download Manager (S3) All Cancel"}));
 
 ext.add("s3dlbsnail-all-open", function () {
     s3dlbsnail.openAll();
 }, M({ja: "ダウンロード完了したファイルをすべて開く",
-      en: "S3. Download Statusbar All Open"}));
+      en: "Download Manager (S3) All Open"}));
 
 ext.add("s3dlbsnail-show-command-for-all", function () {
     s3dlbsnail.showAllActions();
@@ -882,17 +882,17 @@ ext.add("s3dlbsnail-show-command-for-all", function () {
 ext.add("s3dlbsnail-toggle-mode", function() {
     s3downbar.action.mode_toggle();
 }, M({ja: "ミニモードのトグル",
-      en: "Toggle S3. Download Statusbar Mode"}));
+      en: "Toggle Download Manager (S3) Mode"}));
 
 ext.add("s3dlbsnail-toggle-auto-mode", function() {
     s3downbar.action.auto_mode_toggle();
 }, M({ja: "オートモードのトグル",
-      en: "Toggle S3. Download Statusbar Auto Mode"}));
+      en: "Toggle Download Manager (S3) Auto Mode"}));
 
 ext.add("s3dlbsnail-open-preference", function() {
     s3downbar.action.open_options_window();
-}, M({ja: "S3. Download Statusbar の設定を開く",
-      en: "Open S3. Download Statusbar preference"}));
+}, M({ja: "Download Manager (S3) の設定を開く",
+      en: "Open Download Manager (S3) preference"}));
 
 ext.add("s3dlbsnail-open-history", function() {
     s3downbar.action.open_download_window();
